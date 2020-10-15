@@ -13,8 +13,8 @@ class Person():
         disc  = (' Имя: ' + self.name + ' Возраст: ' + str(self.vozr) ).title()
         print(disc)
 
-    def add(self):
-        self.lst.extend(self)
+    #def add(self):
+      #  self.lst.extend(self)
 
     def showlst(self):
         print(self.lst)
@@ -29,6 +29,8 @@ class abitur(Person):
         disc = (" Факультет: " + self.fac)
         print(disc)
 
+    def add(self,*arg):
+        self.lst.extend(arg)
 
 class Student(Person):
     def __init__(self,name,bdate,tdate,fac,kurs):
@@ -41,6 +43,8 @@ class Student(Person):
         disc = (" Факультет: " + self.fac + ' Курс: ' + str(self.kurs))
         print(disc)
 
+    def add(self,*arg):
+        self.lst.extend(arg)
 
 class Prepod(Person):
     def __init__(self,name,bdate,tdate,fac,dolg, stag):
@@ -53,3 +57,6 @@ class Prepod(Person):
         Person.info(self)
         disc = (" Факультет: " + self.fac + ' Должность: ' + self.dolg + " Стаж: " + str(self.stag))
         print(disc)
+
+    def add(self,*arg):
+        self.lst.extend(arg)
